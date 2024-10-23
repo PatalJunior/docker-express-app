@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image and tag it with both VERSION and 'latest'
-                    def customImage = docker.build("pataljunior/docker-node-web-app:${VERSION}", "./web")
+                    def customImage = docker.build("pataljunior/docker-node-web-app:${VERSION}")
                     // Tag the image with 'latest'
                     sh "docker tag pataljunior/docker-node-web-app:${VERSION} pataljunior/docker-node-web-app:latest"
                 }
