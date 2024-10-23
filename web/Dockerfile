@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 
 COPY package.json package-lock.json server.js ./
 RUN ls -l /usr/src/app
-RUN npm ci
+RUN npm install
 
 CMD ["npm","start"]
