@@ -13,7 +13,9 @@ app.get('/', function (req, res) {
         if (isNaN(numVisitsToDisplay)) {
             numVisitsToDisplay = 1;
         }
-        res.send(`<span style="font-size: 4em;">${os.hostname().charAt(0).toUpperCase()}
+        const hostname = os.hostname();
+        hostname.charAt(0).toUpperCase();
+        res.send(`<span style="font-size: 4em;">Hostname: ${hostname}
        <h1>Number of visits is: ${numVisitsToDisplay}</h1>
        </span>
        `)
