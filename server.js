@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
         }
         const hostname = os.hostname();
         hostname.charAt(0).toUpperCase();
-        res.send(`<span style="font-size: 4em;">Hostname: ${hostname}
+        res.send(`<span style="font-size: 4em;">Current Hostname: ${hostname}
        <h1>Number of visits is: ${numVisitsToDisplay}</h1>
        </span>
        `)
